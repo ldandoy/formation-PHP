@@ -2,7 +2,7 @@
 	session_name('Private');
 	session_start();
 
-	if (!isset($_SESSION['name'])) {
+	if (!isset($_SESSION['login'])) {
 		header("Location: login.php");
 	}
 ?>
@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<h1>Bienvenue dans votre espace privé.</h1>
-		Bonjour <?php echo $_SESSION['name']; ?><br />
+		Bonjour <?php echo $_SESSION['login']; ?><br />
 		<p>
 			<a href="logout.php">Déconnexion</a>
 		</p>
